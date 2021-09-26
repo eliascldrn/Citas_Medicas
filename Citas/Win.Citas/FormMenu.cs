@@ -19,7 +19,7 @@ namespace Win.Citas
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Login()
+            Login();
         }
 
         private void Login()
@@ -32,21 +32,21 @@ namespace Win.Citas
         {
             var formProductos = new FormProductos();
             formProductos.MdiParent = this;
-            formProductos.Show()
+            formProductos.Show();
         }
 
         private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formClientes = new FormClientes();
             formClientes.MdiParent = this;
-            formClientes.Show()
+            formClientes.Show();
         }
 
         private void citarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var formCitas = new FormCitas();
             formCitas.MdiParent = this;
-            formCitas.Show()
+            formCitas.Show();
         }
 
         private void FormMenu_Load(object sender, EventArgs e)

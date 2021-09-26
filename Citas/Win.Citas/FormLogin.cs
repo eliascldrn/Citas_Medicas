@@ -32,15 +32,15 @@ namespace Win.Citas
 
             if (usuario == "admin" && contrasena == "123")
             {
-                this.Close()
+                this.Close();
             }
             else if (usuario == "doctor" && contrasena == "passport")
             {
-                this.Close()
+                this.Close();
             }
             else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos.")
+                MessageBox.Show("Usuario o contraseña incorrectos.");
             }
         }
     }
