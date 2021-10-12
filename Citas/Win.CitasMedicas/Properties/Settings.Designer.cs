@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Win.Citas.Properties
+namespace Win.CitasMedicas.Properties
 {
 
 

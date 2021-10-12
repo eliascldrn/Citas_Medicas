@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{61887761-2304-4377-B463-38098F628EAC}</ProjectGuid>
+    <ProjectGuid>{C1F07808-D912-4AE5-93FF-A9F2713B332A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Win.Citas</RootNamespace>
-    <AssemblyName>Win.Citas</AssemblyName>
+    <RootNamespace>Win.CitasMedicas</RootNamespace>
+    <AssemblyName>Win.CitasMedicas</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormCitas.cs">
+    <Compile Include="FormAgendarCitas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCitas.Designer.cs">
-      <DependentUpon>FormCitas.cs</DependentUpon>
+    <Compile Include="FormAgendarCitas.Designer.cs">
+      <DependentUpon>FormAgendarCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCalendario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCalendario.Designer.cs">
+      <DependentUpon>FormCalendario.cs</DependentUpon>
     </Compile>
     <Compile Include="FormClientes.cs">
       <SubType>Form</SubType>
@@ -58,11 +64,18 @@
     <Compile Include="FormClientes.Designer.cs">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMedicamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMedicamentos.Designer.cs">
+      <DependentUpon>FormMedicamentos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
+    <Compile Include=".Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
@@ -70,28 +83,25 @@
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProductos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProductos.Designer.cs">
-      <DependentUpon>FormProductos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormCitas.resx">
-      <DependentUpon>FormCitas.cs</DependentUpon>
+    <EmbeddedResource Include="FormAgendarCitas.resx">
+      <DependentUpon>FormAgendarCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalendario.resx">
+      <DependentUpon>FormCalendario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMedicamentos.resx">
+      <DependentUpon>FormMedicamentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProductos.resx">
-      <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -101,7 +111,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\BL.Citas.Medicamento.datasource" />
+    <None Include="Properties\DataSources\BL.Citas.MedicamentosBL.datasource" />
+    <None Include="Properties\DataSources\BL.Citas.SeguridadBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -114,6 +128,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\out.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\in.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\fondo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\img\Fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL.Citas\BL.Citas.csproj">
+      <Project>{990bfcaa-93a6-4108-868d-e9419879359a}</Project>
+      <Name>BL.Citas</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

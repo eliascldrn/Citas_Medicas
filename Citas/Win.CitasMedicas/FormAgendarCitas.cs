@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Win.Citas
+namespace Win.CitasMedicas
 {
-    public partial class FormCitas : Form
+    public partial class FormAgendarCitas : Form
     {
-        public FormCitas()
+        public FormAgendarCitas()
         {
             InitializeComponent();
         }

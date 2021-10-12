@@ -1,6 +1,6 @@
-﻿namespace Win.Citas
+﻿namespace Win.CitasMedicas
 {
-    partial class FormProductos
+    partial class FormClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // FormProductos
+            // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(342, 301);
-            this.Name = "FormProductos";
-            this.Text = "Productos";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "FormClientes";
+            this.Text = "Buscar Clientes";
             this.ResumeLayout(false);
 
         }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Win.Citas
+namespace Win.CitasMedicas
 {
     static class Program
     {

@@ -1,6 +1,6 @@
-﻿namespace Win.Citas
+﻿namespace Win.CitasMedicas
 {
-    partial class FormCitas
+    partial class FormCalendario
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // FormCitas
+            // FormCalendario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "FormCitas";
-            this.Text = "Citas";
+            this.Name = "FormCalendario";
+            this.Text = "Consultar Calendario de Citas";
             this.ResumeLayout(false);
 
         }
