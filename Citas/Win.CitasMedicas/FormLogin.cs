@@ -40,6 +40,10 @@ namespace Win.CitasMedicas
             Usuario = textBox1.Text;
             Contraseña = textBox2.Text;
 
+            button1.Enabled = false;
+            button1.Text = "Verificando...";
+            Application.DoEvents();
+
            var resultado = _seguridad.Autorizar(Usuario, Contraseña);
 
             if (resultado == true)
