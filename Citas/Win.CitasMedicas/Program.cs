@@ -18,7 +18,7 @@ namespace Win.CitasMedicas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenu());
+            Application.Run(new FormClientes());
         }
 
         //Convierte la imagen a un arreglo de bytes.    

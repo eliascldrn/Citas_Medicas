@@ -91,7 +91,7 @@ namespace BL.Citas
                 resultado.Exitoso = false;
             }
 
-            /*if (cliente.Telefono == 0)
+            if (string.IsNullOrEmpty(cliente.Telefono) == true)
             {
                 resultado.Mensaje = "Ingrese el numero celular del cliente.";
                 resultado.Exitoso = false;
@@ -107,7 +107,7 @@ namespace BL.Citas
             {
                 resultado.Mensaje = "Ingrese el correo del cliente.";
                 resultado.Exitoso = false;
-            }*/
+            }
             return resultado;
         }
     }
@@ -116,10 +116,9 @@ namespace BL.Citas
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
-        /*Deshabilitado por el momento porque dan errores.
-        public int Telefono { get; set; }
+        public string Telefono { get; set; }
         public string Direccion { get; set; }
-        public string Email { get; set; }*/
+        public string Email { get; set; }
         public bool Activo { get; set; }
 
         public Cliente()
