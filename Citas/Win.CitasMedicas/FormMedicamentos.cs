@@ -15,11 +15,22 @@ namespace Win.CitasMedicas
     public partial class FormMedicamentos : Form
     {
         MedicamentosBL _medicamentos;
+        CategoriasBL _categorias;
+        TiposBL _tiposBL;
+
         public FormMedicamentos()
         {
             InitializeComponent();
+
             _medicamentos = new MedicamentosBL();
             listaMedicamentosBindingSource.DataSource = _medicamentos.ObtenerMedicamentos();
+
+            _categorias = new CategoriasBL();
+            listaCategoriasBindingSource.DataSource = _categorias.ObtenerCategorias();
+
+            _tiposBL = new TiposBL();
+            listaTiposBindingSource.DataSource = _tiposBL.ObtenerTipos();
+
         }
 
         private void FormMedicamentos_Load(object sender, EventArgs e)
@@ -115,8 +126,8 @@ namespace Win.CitasMedicas
 
         private void toolStripButtonCancelar_Click(object sender, EventArgs e)
         {
+            _medicamentos.CancelarCambios();
             DeshabilitarHabilitarBotones(true);
-            Eliminar(0);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -125,8 +136,10 @@ namespace Win.CitasMedicas
 
             if (medicamentos != null)
             {
+                openFileDialog1.FileName = "";
                 openFileDialog1.ShowDialog();
-                var archivo = openFileDialog1.FileName;
+
+                var archivo = openFileDialog1.FileName; 
 
                 if (archivo != "")
                 {
@@ -138,7 +151,7 @@ namespace Win.CitasMedicas
             }
             else
             {
-                MessageBox.Show("Cree un producto antes de asignar una imagen.");
+                MessageBox.Show("Cree un medicamento antes de asignar una imagen.");
             }
         }
 

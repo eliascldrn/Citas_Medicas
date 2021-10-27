@@ -8,44 +8,33 @@ namespace BL.Citas
 {
     public class SeguridadBL
     {
-        public bool Autorizar(string Usuario, string Contraseña)
-        {
-            if (Usuario == "admin" && Contraseña == "123")
-            {
-                return true;
-            }
-            else
-            {
-                if (Usuario == "user" && Contraseña == "456")
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-    }
-}
-    /*public class SeguridadBL
-    {
         Contexto _contexto;
 
-        public SeguridadBL();
+        public SeguridadBL()
         {
             _contexto = new Contexto();
         }
 
-        public bool Autorizar (string usuario, string contrasena)
+        public bool Autorizar(string usuario, string contrasena)
         {
             var usuarios = _contexto.Usuarios.ToList();
-            
+
             foreach (var usuarioDB in usuarios)
             {
-                if (usuario ==usuarioDB.Nombre && contrasena == usuarioDB.Contrasena)
+                if (usuario == usuarioDB.Nombre && contrasena == usuarioDB.Contrasena)
                 {
-                return true;
+                    return true;
                 }
-             }
+            }
 
-            return false; 
+            return false;
         }
-    }*/
+    }
+
+    public class Usuario
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public string Contrasena { get; set; }
+    }
+}

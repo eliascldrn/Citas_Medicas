@@ -18,13 +18,13 @@ namespace BL.Citas
         {
             _contexto = new Contexto();
             ListaCategorias = new BindingList<Categoria>();
-
         }
 
         public BindingList<Categoria> ObtenerCategorias()
         {
             _contexto.Categorias.Load();
             ListaCategorias = _contexto.Categorias.Local.ToBindingList();
+
             return ListaCategorias;
         }
     }
@@ -34,5 +34,4 @@ namespace BL.Citas
         public int Id { get; set; }
         public string Descripcion { get; set; }
     }
-
 }
