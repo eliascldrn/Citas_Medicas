@@ -141,6 +141,7 @@
       <DependentUpon>ReporteMedicamentos.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="FormAgendarCitas.resx">
       <DependentUpon>FormAgendarCitas.cs</DependentUpon>
     </EmbeddedResource>

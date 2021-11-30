@@ -159,5 +159,22 @@ namespace Win.CitasMedicas
         {
             fotoPictureBox.Image = null;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string buscar = textBox1.Text;
+
+           // listaMedicamentosBindingSource.DataSource = null;
+
+            if (buscar == "")
+            {
+                listaMedicamentosBindingSource.DataSource = _medicamentos.ObtenerMedicamentos();
+            }
+            else
+            {
+                listaMedicamentosBindingSource.DataSource = _medicamentos.ObtenerMedicamentos(buscar);
+            }
+            listaMedicamentosBindingSource.ResetBindings(false);
+        }
     }
 }

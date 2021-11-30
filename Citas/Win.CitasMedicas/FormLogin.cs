@@ -34,15 +34,23 @@ namespace Win.CitasMedicas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Login();
+        }
+        private void Login()
+        {
             string Usuario;
             string Contraseña;
 
             Usuario = textBox1.Text;
             Contraseña = textBox2.Text;
 
-           var resultado = _seguridad.Autorizar(Usuario, Contraseña);
+            button1.Enabled = true;
+            button1.Text = "Verificando...";
+            Application.DoEvents();
 
-            if (resultado == true)
+            var resultado = _seguridad.Autorizar(Usuario, Contraseña);
+
+            if (resultado != null)
             {
                 this.Close();
             }
@@ -50,6 +58,9 @@ namespace Win.CitasMedicas
             {
                 MessageBox.Show("Verifique Su Usuario o Contraseña Incorrecta");
             }
+            // --
+            button1.Enabled = true;
+            button1.Text = "Corrija su Datos y Presione Enter 3 veces";
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -80,5 +91,22 @@ namespace Win.CitasMedicas
         {
             Application.Exit();
         }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+             if(e.KeyChar == (char)Keys.Enter && textBox1.Text != "")
+            {
+                textBox2.Focus();
+            }   
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter && textBox1.Text != "" && textBox2.Text != "")
+            {
+                Login();
+            }
+        }
     }
+    
 }

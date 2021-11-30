@@ -32,7 +32,7 @@ namespace Win.CitasMedicas
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Esta variable viene Login (Deberia de ser FormLogin) */
+            //Esta variable viene Login (Deberia de ser FormLogin) 
             Login();
         }
 
@@ -40,6 +40,8 @@ namespace Win.CitasMedicas
         {
             var form1 = new Form1();
             form1.ShowDialog();
+
+            toolStripStatusLabel1.Text = "Usuario : "+ Utilidades.NombreUsuario; 
         }
 
         private void agendarCitaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -116,6 +118,16 @@ namespace Win.CitasMedicas
             var formReporteFacturas = new FormReporteFacturas();
             formReporteFacturas.MdiParent = this;
             formReporteFacturas.Show();
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

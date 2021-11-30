@@ -16,6 +16,7 @@ namespace BL.Citas
             usuarioAdmin.Nombre = "admin";
             usuarioAdmin.Contrasena = "123";
 
+
             contexto.Usuarios.Add(usuarioAdmin);
 
             var categoria1 = new Categoria();

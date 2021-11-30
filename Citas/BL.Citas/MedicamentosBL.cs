@@ -11,6 +11,7 @@ namespace BL.Citas
     public class MedicamentosBL
     {
         Contexto _contexto;
+
         public BindingList<Medicamento> ListaMedicamentos { get; set; }
         /*Añadiendo la Lista de Medicamentos*/
         public MedicamentosBL()
@@ -24,7 +25,16 @@ namespace BL.Citas
         {
             _contexto.Medicamentos.Load();
             ListaMedicamentos = _contexto.Medicamentos.Local.ToBindingList();
+
             return ListaMedicamentos;
+        }
+        //parametro para buscar en FormMedicamentos
+        public BindingList<Medicamento> ObtenerMedicamentos(string buscar)
+        {
+            // _contexto.Medicamentos.Load();
+            var resultado = _contexto.Medicamentos.Where(m => m.Descripcion.ToLower().Contains(buscar.ToLower()));
+
+            return new BindingList<Medicamento>(resultado.ToList());
         }
 
         // Agregando nuevo metodo para cancelar.
