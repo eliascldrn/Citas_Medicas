@@ -31,19 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.programarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agendarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.medicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calendarioDeCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.facturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agendarCitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calendarioDeCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeMedicamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesDeCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeCalendarioDeCitasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -77,43 +77,29 @@
             // programarCitaToolStripMenuItem
             // 
             this.programarCitaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agendarCitaToolStripMenuItem,
             this.medicamentosToolStripMenuItem,
-            this.calendarioDeCitasToolStripMenuItem,
-            this.buscarMedicamentosToolStripMenuItem,
-            this.facturaToolStripMenuItem});
+            this.clientesToolStripMenuItem,
+            this.facturaToolStripMenuItem,
+            this.agendarCitaToolStripMenuItem,
+            this.calendarioDeCitasToolStripMenuItem});
             this.programarCitaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.programarCitaToolStripMenuItem.Name = "programarCitaToolStripMenuItem";
             this.programarCitaToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.programarCitaToolStripMenuItem.Text = "Consultas";
             // 
-            // agendarCitaToolStripMenuItem
-            // 
-            this.agendarCitaToolStripMenuItem.Name = "agendarCitaToolStripMenuItem";
-            this.agendarCitaToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.agendarCitaToolStripMenuItem.Text = "Agendar Cita";
-            this.agendarCitaToolStripMenuItem.Click += new System.EventHandler(this.agendarCitaToolStripMenuItem_Click);
-            // 
             // medicamentosToolStripMenuItem
             // 
             this.medicamentosToolStripMenuItem.Name = "medicamentosToolStripMenuItem";
             this.medicamentosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.medicamentosToolStripMenuItem.Text = "Buscar Clientes";
-            this.medicamentosToolStripMenuItem.Click += new System.EventHandler(this.medicamentosToolStripMenuItem_Click);
+            this.medicamentosToolStripMenuItem.Text = "Buscar Medicamentos";
+            this.medicamentosToolStripMenuItem.Click += new System.EventHandler(this.buscarMedicamentosToolStripMenuItem_Click);
             // 
-            // calendarioDeCitasToolStripMenuItem
+            // clientesToolStripMenuItem
             // 
-            this.calendarioDeCitasToolStripMenuItem.Name = "calendarioDeCitasToolStripMenuItem";
-            this.calendarioDeCitasToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.calendarioDeCitasToolStripMenuItem.Text = "Calendario de Citas";
-            this.calendarioDeCitasToolStripMenuItem.Click += new System.EventHandler(this.calendarioDeCitasToolStripMenuItem_Click);
-            // 
-            // buscarMedicamentosToolStripMenuItem
-            // 
-            this.buscarMedicamentosToolStripMenuItem.Name = "buscarMedicamentosToolStripMenuItem";
-            this.buscarMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.buscarMedicamentosToolStripMenuItem.Text = "Buscar Medicamentos";
-            this.buscarMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.buscarMedicamentosToolStripMenuItem_Click);
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.clientesToolStripMenuItem.Text = "Buscar Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.medicamentosToolStripMenuItem_Click);
             // 
             // facturaToolStripMenuItem
             // 
@@ -122,14 +108,27 @@
             this.facturaToolStripMenuItem.Text = "Factura";
             this.facturaToolStripMenuItem.Click += new System.EventHandler(this.facturaToolStripMenuItem_Click);
             // 
+            // agendarCitaToolStripMenuItem
+            // 
+            this.agendarCitaToolStripMenuItem.Name = "agendarCitaToolStripMenuItem";
+            this.agendarCitaToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.agendarCitaToolStripMenuItem.Text = "Agendar Cita";
+            this.agendarCitaToolStripMenuItem.Click += new System.EventHandler(this.agendarCitaToolStripMenuItem_Click);
+            // 
+            // calendarioDeCitasToolStripMenuItem
+            // 
+            this.calendarioDeCitasToolStripMenuItem.Name = "calendarioDeCitasToolStripMenuItem";
+            this.calendarioDeCitasToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.calendarioDeCitasToolStripMenuItem.Text = "Calendario de Citas";
+            this.calendarioDeCitasToolStripMenuItem.Click += new System.EventHandler(this.calendarioDeCitasToolStripMenuItem_Click);
+            // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reporteDeMedicamentosToolStripMenuItem,
             this.reporteDeFacturasToolStripMenuItem,
             this.reportesDeCitasToolStripMenuItem,
-            this.reporteDeClientesToolStripMenuItem,
-            this.reporteDeCalendarioDeCitasToolStripMenuItem});
+            this.reporteDeClientesToolStripMenuItem});
             this.reportesToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
@@ -138,39 +137,36 @@
             // reporteDeMedicamentosToolStripMenuItem
             // 
             this.reporteDeMedicamentosToolStripMenuItem.Name = "reporteDeMedicamentosToolStripMenuItem";
-            this.reporteDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.reporteDeMedicamentosToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.reporteDeMedicamentosToolStripMenuItem.Text = "Reporte de Medicamentos";
             this.reporteDeMedicamentosToolStripMenuItem.Click += new System.EventHandler(this.reporteDeMedicamentosToolStripMenuItem_Click);
             // 
             // reporteDeFacturasToolStripMenuItem
             // 
             this.reporteDeFacturasToolStripMenuItem.Name = "reporteDeFacturasToolStripMenuItem";
-            this.reporteDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.reporteDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.reporteDeFacturasToolStripMenuItem.Text = "Reporte de Facturas";
             this.reporteDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.reporteDeFacturasToolStripMenuItem_Click);
             // 
             // reportesDeCitasToolStripMenuItem
             // 
             this.reportesDeCitasToolStripMenuItem.Name = "reportesDeCitasToolStripMenuItem";
-            this.reportesDeCitasToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.reportesDeCitasToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.reportesDeCitasToolStripMenuItem.Text = "Reporte de Citas";
+            this.reportesDeCitasToolStripMenuItem.Click += new System.EventHandler(this.reportesDeCitasToolStripMenuItem_Click);
             // 
             // reporteDeClientesToolStripMenuItem
             // 
             this.reporteDeClientesToolStripMenuItem.Name = "reporteDeClientesToolStripMenuItem";
-            this.reporteDeClientesToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.reporteDeClientesToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.reporteDeClientesToolStripMenuItem.Text = "Reporte de Clientes";
-            // 
-            // reporteDeCalendarioDeCitasToolStripMenuItem
-            // 
-            this.reporteDeCalendarioDeCitasToolStripMenuItem.Name = "reporteDeCalendarioDeCitasToolStripMenuItem";
-            this.reporteDeCalendarioDeCitasToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
-            this.reporteDeCalendarioDeCitasToolStripMenuItem.Text = "Reporte de Calendario de Citas";
+            this.reporteDeClientesToolStripMenuItem.Click += new System.EventHandler(this.reporteDeClientesToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loginToolStripMenuItem});
+            this.loginToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
             this.seguridadToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
             this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
@@ -180,9 +176,16 @@
             // loginToolStripMenuItem
             // 
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
             this.loginToolStripMenuItem.Text = "Login";
             this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(114, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuario";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // pictureBox4
             // 
@@ -289,15 +292,14 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem programarCitaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agendarCitaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem medicamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seguridadToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem calendarioDeCitasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesDeCitasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeClientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteDeCalendarioDeCitasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem buscarMedicamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem medicamentosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDeMedicamentosToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -307,5 +309,6 @@
         private System.Windows.Forms.ToolStripMenuItem reporteDeFacturasToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
     }
 }

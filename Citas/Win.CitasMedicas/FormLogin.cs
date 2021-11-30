@@ -52,6 +52,8 @@ namespace Win.CitasMedicas
 
             if (resultado != null)
             {
+                Utilidades.UsuarioActual = resultado;
+
                 this.Close();
             }
             else

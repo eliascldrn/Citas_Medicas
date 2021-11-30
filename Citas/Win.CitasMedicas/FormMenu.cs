@@ -32,16 +32,41 @@ namespace Win.CitasMedicas
 
         private void loginToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // sirve para cerrar todas las ventanas antes de cambiar de usuario
+            Form[] forms = Application.OpenForms.Cast<Form>().ToArray();
+
+            foreach (Form f in forms)
+            {
+                if(f.Name != "FormMenu")
+                {
+                    f.Close();
+                }
+            }
+
+
             //Esta variable viene Login (Deberia de ser FormLogin) 
             Login();
         }
-
         private void Login()
         {
+
             var form1 = new Form1();
             form1.ShowDialog();
 
-            toolStripStatusLabel1.Text = "Usuario : "+ Utilidades.NombreUsuario; 
+            toolStripStatusLabel1.Text = "Usuario : "+ Utilidades.UsuarioActual.Nombre;
+            if (Utilidades.UsuarioActual.EsAdmin)
+            {
+                usuariosToolStripMenuItem.Visible = true;
+            }
+            else
+            {
+                usuariosToolStripMenuItem.Visible = false;
+                medicamentosToolStripMenuItem.Visible = Utilidades.UsuarioActual.PuedeAccederMedicamentos;
+                clientesToolStripMenuItem.Visible = Utilidades.UsuarioActual.PuedeAccederClientes;
+                facturaToolStripMenuItem.Visible = Utilidades.UsuarioActual.PuedeAccederFacturas;
+                reportesToolStripMenuItem.Visible = Utilidades.UsuarioActual.PuedeAccederReportes;
+            }
+            
         }
 
         private void agendarCitaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -128,6 +153,28 @@ namespace Win.CitasMedicas
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formUsuarios = new FormUsuarios();
+            formUsuarios.MdiParent = this;
+            formUsuarios.Show();
+
+        }
+
+        private void reportesDeCitasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteCitas = new FormReporteCitas();
+            formReporteCitas.MdiParent = this;
+            formReporteCitas.Show();
+        }
+
+        private void reporteDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var formReporteClientes = new FormReporteClientes();
+            formReporteClientes.MdiParent = this;
+            formReporteClientes.Show();
         }
     }
 }

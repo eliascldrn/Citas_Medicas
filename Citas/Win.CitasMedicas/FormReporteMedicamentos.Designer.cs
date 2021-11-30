@@ -43,8 +43,6 @@
             this.crystalReportViewer1.Size = new System.Drawing.Size(561, 429);
             this.crystalReportViewer1.TabIndex = 0;
             this.crystalReportViewer1.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
-       // este es linea comando esta vinculada con  Reporte de medicamentos pero no sale segun el video.
-            /*     this.crystalReportViewer1.Load += new System.EventHandler(this.crystalReportViewer1_Load);*/
             // 
             // FormReporteMedicamentos
             // 
@@ -53,6 +51,7 @@
             this.ClientSize = new System.Drawing.Size(561, 429);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "FormReporteMedicamentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte de Medicamentos";
             this.ResumeLayout(false);
 

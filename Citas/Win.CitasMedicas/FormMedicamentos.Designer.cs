@@ -179,7 +179,7 @@
             this.listaMedicamentosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
             this.listaMedicamentosBindingNavigator.Size = new System.Drawing.Size(686, 27);
             this.listaMedicamentosBindingNavigator.TabIndex = 0;
-            this.listaMedicamentosBindingNavigator.Text = "bindingNavigator1";
+            this.listaMedicamentosBindingNavigator.Text = ".";
             // 
             // listaMedicamentosBindingSource
             // 

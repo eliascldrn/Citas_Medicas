@@ -10,12 +10,7 @@ namespace BL.Citas
 {
     public class Contexto:DbContext
     {
-        /*public Contexto() : base("Medicinas.")
-        {
-
-        }*/
-
-        public Contexto() : base("Server=.;Database=PruebaDB;Trusted_Connection=True;")
+        public Contexto() : base("Medicinas.")
         {
 
         }
@@ -32,5 +27,6 @@ namespace BL.Citas
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Factura> Facturas { get; set; }
+        public DbSet<Agenda> Agenda { get; set; }
     }
 }

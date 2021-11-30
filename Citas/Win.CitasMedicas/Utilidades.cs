@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BL.Citas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Win.CitasMedicas
 {
     public static class Utilidades
     {
-        public static string NombreUsuario;
+        public static Usuario UsuarioActual;
     }
 }
